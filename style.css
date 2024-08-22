@@ -1,0 +1,93 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Mexe com o corpo do navbar */ 
+.navbar {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+.navbar .icon {
+    display: flex;
+    align-items: center;
+}
+.navbar .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Mexa no corpo das tag <a> */
+.navbar .nav-items {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: -40px;
+}
+
+.navbar .nav-items > li {
+    list-style: none;
+    position: relative;
+}
+
+/* Mexa nas tag <a> que estãoo dentro das tag <li> */
+.navbar .nav-items > li > a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;   
+    margin-left: -15px;
+}
+
+/* Efeito que acontece ao passar o mouse  */
+.navbar .nav-items > li > a:hover {
+    background-color: #575757;
+    border-radius: 4p
+}
+
+
+/* Estilo para os sub-itens */
+
+.navbar .nav-items > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -16px;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 4px;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.navbar .nav-items > li:hover > ul {
+    display: block;
+}
+
+.navbar .nav-items > li > ul > li {
+    border-bottom: 1px solid #444;
+}
+
+.navbar .nav-items > li > ul > li:last-child {
+    border-bottom: none;
+}
+
+.navbar .nav-items > li > ul > li > a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.navbar .nav-items > li > ul > li > a:hover {
+    background-color: #575757;
+}
